@@ -1,0 +1,119 @@
+body {
+    font-family: Verdana;
+    background-color: #ffffff;
+    margin: 0px;
+  }
+  
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #832142;
+    color: #ffffff;
+    padding: 3vh;
+  }
+  
+  /*  min-width for time element so it is not moved*/
+  
+  time {
+    min-width: 85px;
+  }
+  
+  
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  
+  .button {
+    display: block;
+    color: #ffffff;
+    background-color: #832173;
+    padding: 2vh;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .inline-buttons {
+    display: inline-flex;
+  }
+  
+  
+  
+  .card {
+    max-width: 80%;
+    margin-top: 15vh;
+    border: solid;
+    border-width: 2px;
+    padding: 5vw;
+    border-radius: 30px;
+    border-color: lightgray;
+    box-shadow: 10px 5px 5px lightgray;
+  }
+  
+  
+  
+  #start-screen {
+    display: inline;
+    text-align: center;
+  }
+  
+  /* Question Card */
+  
+  .option-button {
+    width: 100%;
+    text-align: left;
+    margin: 5px;
+  }
+  
+  #result-div {
+    display: none;
+  }
+  
+  /* Score Card */
+  
+  .inline-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  #initials {
+    width: 25%;
+    margin: 8px;
+    padding: 1vh;
+  }
+  
+  /* Leaderboard Card */
+  
+  #back-button {
+    margin-right: 8px;
+  }
+  
+  .highscore-list {
+    padding-inline-start: 20px;
+  }
+  
+  /* Media Queries */
+  
+  @media screen and (min-width: 850px) {
+    .card {
+      max-width: 680px;
+    }
+  }
+  
+  /* Media query that is specific to devices that can use hover */
+  @media (hover) {
+    /* Stylings reffering to hover pseudo-class*/
+    a:hover {
+      color: #e1cbd1;
+    }
+  
+    button:hover {
+      background-color: rgba(92, 33, 131, 0.5);
+    }
+  }
+  
