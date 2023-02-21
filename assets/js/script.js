@@ -79,7 +79,7 @@ const questions = [
     hideCards();
     questionCard.removeAttribute("hidden");
   
-    //assign 0 to currentQuestion when start button is clicked, then display the current question on the page
+    // 0 to the question when start button is clicked, then display the current question on the page
     currentQuestion = 0;
     displayQuestion();
   
@@ -89,7 +89,7 @@ const questions = [
     //starts the function "countdown" every 1000ms to update time and displays it on the page
     intervalID = setInterval(countdown, 1000);
   
-    //put displayTime here to make sure time appears on the page as soon as the start button is clicked, not after 1 second.
+    // time appears when the start button is clicked, not after 1 second.
     displayTime();
   }
   
@@ -108,7 +108,7 @@ const questions = [
     timeDisplay.textContent = time;
   }
   
-  //display the question and answer options for the current question
+  //show the question and answer choices for the current question
   function displayQuestion() {
     let question = questions[currentQuestion];
     let options = question.options;
@@ -123,7 +123,7 @@ const questions = [
     }
   }
   
-  //behaviour when an answer button is clicked: click event bubbles up to div with id "quiz-options"
+  // when an answer button is clicked, the click event bubbles up to div with id "quiz-options"
   //eventObject.target identifies the specific button element that was clicked on
   document.querySelector("#quiz-options").addEventListener("click", checkAnswer);
   
@@ -132,7 +132,7 @@ const questions = [
     return optionButton.textContent === questions[currentQuestion].answer;
   }
   
-  //if answer is wrong, reduce time
+  //if the answer is wrong, reduce time
   function checkAnswer(eventObject) {
     let optionButton = eventObject.target;
     resultDiv.style.display = "block";
@@ -214,7 +214,7 @@ const questions = [
     localStorage.setItem("leaderboardArray", JSON.stringify(leaderboardArray));
   }
   
-  //get "leaderboardArray" from local storage (if it exists) and parse it into a javascript object using JSON.parse
+  //gets leaderboard array from the local storage, and parse it into a javascript object using JSON.parse
   function getLeaderboard() {
     let storedLeaderboard = localStorage.getItem("leaderboardArray");
     if (storedLeaderboard !== null) {
