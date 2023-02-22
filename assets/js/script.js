@@ -1,4 +1,4 @@
-//all questions, answers, and option were put in an array. 
+//all questions, answers, and options were put in an array. 
 const questions = [
     {
       questionText: "Javascript is what kind of side programming language?",
